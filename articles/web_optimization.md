@@ -8,7 +8,7 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-![图片描述](http://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
+![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
 
