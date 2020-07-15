@@ -79,6 +79,7 @@ optimization: {
 }
 ```
  __注意：以上只是一个示例，不一定适合所有项目，因此还需要实际分析才能得到最优结果；__ 
+
 splitChunks相关资料：
 https://www.webpackjs.com/plugins/split-chunks-plugin/ 
 
@@ -90,13 +91,14 @@ https://juejin.im/post/5af1677c6fb9a07ab508dabb
 https://www.bejson.com/ui/compress_img/ 
 
 2.) cdn
-使用一些三方js库的时候可以利用cdn加速访问，如:https://www.bootcdn.cn/，提供了常用的js库；
+使用一些三方js库的时候可以利用cdn加速访问，如:https://www.bootcdn.cn/， 提供了常用的js库；
 
 ## 项目优化展示
 #### 1.通行证项目
 ##### 1.1) js文件输出列表
 优化前：
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-before.png)
+
 优化后：
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-after.png)
 
@@ -118,6 +120,7 @@ Load：页面样式和其他静态资源加载完成
 注：以下统计数据以秒(s)为单位
 
  __优化前首页记载情况(无缓存)__ 
+
 ||~Finish||~DomContentLoaded||~Load||
 ||12.91 ||7.38 ||8.41 ||
 ||14.38 ||5.57 ||6.18 ||
@@ -129,6 +132,7 @@ Load：页面样式和其他静态资源加载完成
 ||11.79 ||5.79 ||6.80 ||
 ||10.81 ||6.15 ||6.72 ||
 ||11.87 ||6.47 ||7.29 ||
+
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-before-argv.png)
 
@@ -145,6 +149,7 @@ Load：页面样式和其他静态资源加载完成
 ||4.14 ||2.55 ||3.66 ||
 ||5.91 ||3.86 ||5.28 ||
 ||4.32 ||2.71 ||3.83 ||
+
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-after-argv.png)
 
