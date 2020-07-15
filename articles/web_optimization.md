@@ -8,7 +8,7 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
+![图片描述](http://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
 
@@ -188,17 +188,65 @@ Load：页面样式和其他静态资源加载完成
 
  __优化后首页记载情况(无缓存)__ 
 
-||~Finish||~DomContentLoaded||~Load||
-||9.27 ||3.62 ||4.94 ||
-||5.23 ||2.57 ||3.66 ||
-||4.94 ||2.63 ||3.84 ||
-||5.82 ||2.53 ||3.60 ||
-||5.22 ||2.49 ||4.00 ||
-||4.12 ||2.62 ||3.63 ||
-||4.13 ||2.62 ||3.65 ||
-||4.14 ||2.55 ||3.66 ||
-||5.91 ||3.86 ||5.28 ||
-||4.32 ||2.71 ||3.83 ||
+<table>
+  <thead>
+    <th>Finish</th>
+    <th>DomContentLoaded</th>
+    <th>Load</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9.27</td>
+      <td>3.62</td>
+      <td>4.94</td>
+    </tr>
+    <tr>
+      <td>5.23</td>
+      <td>2.57</td>
+      <td>3.66</td>
+    </tr>
+    <tr>
+      <td>4.94</td>
+      <td>2.63</td>
+      <td>3.84</td>
+    </tr>
+    <tr>
+      <td>5.82</td>
+      <td>2.53</td>
+      <td>3.60</td>
+    </tr>
+    <tr>
+      <td>5.22</td>
+      <td>2.49</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <td>4.12</td>
+      <td>2.62</td>
+      <td>3.63</td>
+    </tr>
+    <tr>
+      <td>4.13</td>
+      <td>2.62</td>
+      <td>3.65</td>
+    </tr>
+    <tr>
+      <td>4.14</td>
+      <td>2.55</td>
+      <td>3.66</td>
+    </tr>
+    <tr>
+      <td>5.91</td>
+      <td>3.86</td>
+      <td>5.28</td>
+    </tr>
+    <tr>
+      <td>4.32</td>
+      <td>2.71</td>
+      <td>3.83</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-after-argv.png)
