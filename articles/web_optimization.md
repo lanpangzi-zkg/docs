@@ -123,17 +123,65 @@ Load：页面样式和其他静态资源加载完成
 
  __优化前首页记载情况(无缓存)__ 
 
-|~Finish|~DomContentLoaded|~Load|
-|12.91 |7.38 |8.41 |
-|14.38 |5.57 |6.18 |
-||10.43 ||5.39 ||6.19 ||
-||10.49 ||5.44 ||6.12 ||
-||10.45 ||5.42 ||6.17 ||
-||10.86 ||5.44 ||6.08 ||
-||11.01 ||5.47 ||6.12 ||
-||11.79 ||5.79 ||6.80 ||
-||10.81 ||6.15 ||6.72 ||
-||11.87 ||6.47 ||7.29 ||
+<table>
+  <thead>
+    <th>Finish</th>
+    <th>DomContentLoaded</th>
+    <th>Load</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12.91</td>
+      <td>7.38</td>
+      <td>8.41</td>
+    </tr>
+    <tr>
+      <td>14.38</td>
+      <td>5.57</td>
+      <td>6.18</td>
+    </tr>
+    <tr>
+      <td>10.43</td>
+      <td>5.39</td>
+      <td>6.19</td>
+    </tr>
+    <tr>
+      <td>10.49</td>
+      <td>5.44</td>
+      <td>6.12</td>
+    </tr>
+    <tr>
+      <td>10.45</td>
+      <td>5.42</td>
+      <td>6.17</td>
+    </tr>
+    <tr>
+      <td>10.86</td>
+      <td>5.44</td>
+      <td>6.08</td>
+    </tr>
+    <tr>
+      <td>11.01</td>
+      <td>5.47</td>
+      <td>6.12</td>
+    </tr>
+    <tr>
+      <td>11.79</td>
+      <td>5.79</td>
+      <td>6.80</td>
+    </tr>
+    <tr>
+      <td>10.81</td>
+      <td>6.15</td>
+      <td>6.72</td>
+    </tr>
+    <tr>
+      <td>11.87</td>
+      <td>6.47</td>
+      <td>7.29</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-before-argv.png)
