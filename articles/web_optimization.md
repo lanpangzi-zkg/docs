@@ -1,4 +1,4 @@
-#前端项目优化解决方案
+# 前端项目优化解决方案
 
 -----
 
@@ -30,6 +30,20 @@ import Table from 'fl-pro/lib/Table';
 这两款插件是自研的antd图标库体积优化插件，可以减小js体积达数百KB，具体使用配置请参考：
 https://www.npmjs.com/package/antd-icon-reduce-plugin 
 
+* 注意：由于公司内部系统使用了fl-pro组件库，因此在wbepack配置文件中确保组件库能被antd-icon-reduce-loader处理，例如：
+
+```
+{
+    test: (filePath) => {
+        if (filePath.indexOf('fl-pro') >= 0 && path.extname(filePath) === '.js') {
+            return true;
+        }
+        return false;
+    },
+    use: ['antd-icon-reduce-loader'],
+}
+```
+
 2.) antd-dayjs-webpack-plugin
 该插件是antd官方推荐的一款减小moment体积的插件，使用简单，首先安装依赖：
 ```
@@ -39,11 +53,13 @@ npm i antd-dayjs-webpack-plugin -D
 其次，添加webpack插件配置：
 ```
  plugins: [
-      new AntdDayjsWebpackPlugin({
+    new AntdDayjsWebpackPlugin({
 		preset: 'antdv3'
 	})  
-  ] 
+] 
 ```
+* 注意：请检查日期组件是否有乱码或使用异常的情况，如果有的话，可先不使用这款插件
+
 #### 3.构建输出优化
 通过上述优化之后，项目输出的资源体积可能还会比较大，往往都是由于使用了大量的antd组件或者三方组件导致的，因此还需要针对这些情况做一些处理，具体如下：
 1.) 提取重复使用的antd组件
@@ -83,6 +99,7 @@ optimization: {
  __注意：以上只是一个示例，不一定适合所有项目，因此还需要实际分析才能得到最优结果；__ 
 
 splitChunks相关资料：
+
 https://www.webpackjs.com/plugins/split-chunks-plugin/ 
 
 https://juejin.im/post/5af1677c6fb9a07ab508dabb 
