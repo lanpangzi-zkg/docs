@@ -8,7 +8,7 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-![图片描述](./images/app-1-slow.jpg)
+![图片描述](https://github.com/lanpangzi-zkg/docs/blob/master/articles/images/app-1-slow.jpg)
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
 
@@ -119,7 +119,7 @@ https://www.bejson.com/ui/compress_img/
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-before.png)
 
 优化后：
-![图片描述](./images/tongxingzheng-after.png)
+![图片描述](https://github.com/lanpangzi-zkg/docs/blob/master/articles/images/tongxingzheng-after.png)
 
 ##### 1.2) 体积对比图(最大体积为单个js文件最大的体积)：
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-js-duibi.png)
