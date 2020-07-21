@@ -8,7 +8,7 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
+![图片描述](./images/app-1-slow.jpg)
 
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
 
@@ -30,7 +30,7 @@ import Table from 'fl-pro/lib/Table';
 这两款插件是自研的antd图标库体积优化插件，可以减小js体积达数百KB，具体使用配置请参考：
 https://www.npmjs.com/package/antd-icon-reduce-plugin 
 
-* 注意：由于公司内部系统使用了fl-pro组件库，因此在wbepack配置文件中确保组件库能被antd-icon-reduce-loader处理，例如：
+* 注意：由于公司内部系统使用了fl-pro组件库，因此在webpack配置文件中确保组件库能被antd-icon-reduce-loader处理，例如：
 
 ```
 {
@@ -119,7 +119,7 @@ https://www.bejson.com/ui/compress_img/
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-before.png)
 
 优化后：
-![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-after.png)
+![图片描述](./images/tongxingzheng-after.png)
 
 ##### 1.2) 体积对比图(最大体积为单个js文件最大的体积)：
 ![图片描述](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-js-duibi.png)
@@ -131,9 +131,9 @@ https://www.bejson.com/ui/compress_img/
 
 ##### 2.2) 首页加载性能
 以下将通过一组数据来做比较，总共记录了10次网络请求的参数，其中有三个统计指标，分别是Finish，DomContentLoaded，Load，他们分别代表的意思:
-Finish：首页渲染完成，包括接口数据的请求，用户可以正常交互
-DomContentLoaded：页面DOM结构加载完成
-Load：页面样式和其他静态资源加载完成
+Finish：首页渲染完成，包括接口数据的请求，用户可以正常交互；
+DomContentLoaded：页面DOM结构加载完成；
+Load：页面样式和其他静态资源加载完成；
 
 ----------
 注：以下统计数据以秒(s)为单位
