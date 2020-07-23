@@ -24,8 +24,25 @@ import Table from 'fl-pro/lib/Table';
 ......
 ```
 * 其他组件类似，都遵循：import 组件名 from 'fl-pro/lib/组件名';
+* 有需要使用表格的页面，优先推荐使用SimpleTable，可以减少js打包体积；
 
-#### 2.三方优化插件
+#### 2.三方依赖包按需引入
+项目中自定义安装的包，如果导致打包体积过大，可以尝试按需引入，有些组件是可以支持的，例如图表库bizcharts,
+```
+修改前:
+import { Chart, Geom, Axis, Tooltip, Legend } from 'bizcharts';
+```
+
+```
+修改后:
+import Chart from "bizcharts/lib/components/Chart";
+import Geom from "bizcharts/lib/components/Geom";
+import Axis from "bizcharts/lib/components/Axis";
+import Tooltip from "bizcharts/lib/components/Tooltip";
+import Legend from "bizcharts/lib/components/Legend";
+```
+
+#### 3.三方优化插件
 1.) antd-icon-reduce-plugin&antd-icon-reduce-loader
 这两款插件是自研的antd图标库体积优化插件，可以减小js体积达数百KB，具体使用配置请参考：
 https://www.npmjs.com/package/antd-icon-reduce-plugin 
@@ -60,7 +77,7 @@ npm i antd-dayjs-webpack-plugin -D
 ```
 * 注意：请检查日期组件是否有乱码或使用异常的情况，如果有的话，可先不使用这款插件
 
-#### 3.构建输出优化
+#### 4.构建输出优化
 通过上述优化之后，项目输出的资源体积可能还会比较大，往往都是由于使用了大量的antd组件或者三方组件导致的，因此还需要针对这些情况做一些处理，具体如下：
 
 1.) 提取重复使用的antd组件
@@ -73,7 +90,7 @@ optimization: {
                ......
                antd: {
                   minChunks: 2,
-                  priority: 4,
+                  priority: 1,
                   test: /node_modules[\\/]antd/,
                },
           },
@@ -86,15 +103,15 @@ optimization: {
 如果组件支持按需加载的功能，引用方式就调整一下，和公司组件库调整类似，如果不支持，那么使用splitChunks分离出来，形如：
 ```
 optimization: {
-      ......
-      splitChunks: {
- 		......
- 		bizchart: {
-          		test:  /node_modules[\\/]bizcharts/,
-          		name: 'bizchart',
-          		priority: 5,
-        	},
-	}
+    ......
+    splitChunks: {
+ 		   ......
+ 		   antv: {
+          		test:  /node_modules[\\/]@antv/,
+          		name: 'antv',
+          		priority: 1,
+        },
+	  }
 }
 ```
  __注意：以上只是一个示例，不一定适合所有项目，因此还需要实际分析才能得到最优结果；__ 
@@ -105,7 +122,7 @@ https://www.webpackjs.com/plugins/split-chunks-plugin/
 
 https://juejin.im/post/5af1677c6fb9a07ab508dabb 
 
-#### 4.其他优化
+#### 5.其他优化
 1.) 图片优化
 在一些项目中使用的图片体积较大，可以使用图片压缩工具进行压缩，例如：
 https://www.bejson.com/ui/compress_img/ 
