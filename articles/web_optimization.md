@@ -8,10 +8,8 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-<!-- <img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg"> -->
-![avatar](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
-<!-- <img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg"> -->
-![avatar](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
+<img src="./images/app-1-slow.jpg">
+<img src="./images/app-2-slow.jpg">
 
 两个系统首页都包含一个超过2M的js文件，网络请求时间很长，其他网络请求阻塞严重，DomContentLoaded都超过了7s，用户看到页面的时间就更长了，因此网站的性能是很差的，目前公司内部还有很多这样的系统，因此亟需一次性能优化。
 ## 解决方案
@@ -135,18 +133,18 @@ https://www.bejson.com/ui/compress_img/
 #### 1.通行证项目
 ##### 1.1) js文件输出列表
 优化前：
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-before.png">
+<img src="./images/tongxingzheng-before.png">
 
 优化后：
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-after.png">
+<img src="./images/tongxingzheng-after.png">
 
 ##### 1.2) 体积对比图(最大体积为单个js文件最大的体积)：
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/tongxingzheng-js-duibi.png">
+<img src="./images/tongxingzheng-js-duibi.png">
 
 #### 2.福禄研发运维平台(RDMS)
 
 ##### 2.1) 体积对比图
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-js-duibi.png">
+<img src="./images/rdms-js-duibi.png">
 
 ##### 2.2) 首页加载性能
 以下将通过一组数据来做比较，总共记录了10次网络请求的参数，其中有三个统计指标，分别是Finish，DomContentLoaded，Load，他们分别代表的意思:
@@ -220,7 +218,7 @@ Load：页面样式和其他静态资源加载完成；
 </table>
 
 
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-before-argv.png">
+<img src="./images/rdms-before-argv.png">
 
  __优化后首页记载情况(无缓存)__ 
 
@@ -285,7 +283,7 @@ Load：页面样式和其他静态资源加载完成；
 </table>
 
 
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/rdms-after-argv.png">
+<img src="./images/rdms-after-argv.png">
 
 通过上面数据的对比，在三项指标中，性能分别提升了 __54.3%，51.7%，65%__ ，在缓存模式下，性能也可以提高20%以上。
 ## 最后
