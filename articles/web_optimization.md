@@ -8,9 +8,10 @@
 
 下面选取了两个在IT环境的项目首页加载过程中js的截图(无缓存)：
 
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg">
-
-<img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg">
+<!-- <img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg"> -->
+![avatar](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-1-slow.jpg)
+<!-- <img src="https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg"> -->
+![avatar](https://fulu-common-util.oss-cn-hangzhou.aliyuncs.com/wiki_assets/app-2-slow.jpg)
 
 两个系统首页都包含一个超过2M的js文件，网络请求时间很长，其他网络请求阻塞严重，DomContentLoaded都超过了7s，用户看到页面的时间就更长了，因此网站的性能是很差的，目前公司内部还有很多这样的系统，因此亟需一次性能优化。
 ## 解决方案
