@@ -137,8 +137,10 @@ https://www.bejson.com/ui/compress_img/
 ##### 1.1) js文件输出列表
 优化前：
 <img src="./images/fightdata-1.png">
+
 优化v1:
 <img src="./images/fightdata-2.png">
+
 优化v2:
 <img src="./images/fightdata-3.png">
 
