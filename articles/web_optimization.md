@@ -136,12 +136,15 @@ https://www.bejson.com/ui/compress_img/
 
 ##### 1.1) js文件输出列表
 优化前：
+
 <img src="./images/fightdata-1.png">
 
 优化v1:
+
 <img src="./images/fightdata-2.png">
 
 优化v2:
+
 <img src="./images/fightdata-3.png">
 
 #### 1.2 体积对比图
@@ -154,9 +157,11 @@ https://www.bejson.com/ui/compress_img/
 #### 2.通行证项目
 ##### 2.1) js文件输出列表
 优化前：
+
 <img src="./images/tongxingzheng-before.png">
 
 优化后：
+
 <img src="./images/tongxingzheng-after.png">
 
 ##### 2.2) 体积对比图(最大体积为单个js文件最大的体积)：
