@@ -130,23 +130,42 @@ https://www.bejson.com/ui/compress_img/
 使用一些三方js库的时候可以利用cdn加速访问，如:https://www.bootcdn.cn/， 提供了常用的js库；
 
 ## 项目优化展示
-#### 1.通行证项目
+
+#### 1.福禄战娃
+福禄战娃这个项目的优化经历了两个版本(下面分别简称v1和v2)，从优化前到目前版本，js总体体积减小68%(10.28M->3.48M),单个js最大体积减小86%(4.65M->651kb)；
+
 ##### 1.1) js文件输出列表
+优化前：
+<img src="./images/fightdata-1.png">
+优化v1:
+<img src="./images/fightdata-2.png">
+优化v2:
+<img src="./images/fightdata-3.png">
+
+#### 1.2 体积对比图
+<img src="./images/fightdata.png">
+
+#### 1.3 其他说明
+
+* 目前战娃项目使用了三方图表库和excel工具库，导致不能进一步优化；
+
+#### 2.通行证项目
+##### 2.1) js文件输出列表
 优化前：
 <img src="./images/tongxingzheng-before.png">
 
 优化后：
 <img src="./images/tongxingzheng-after.png">
 
-##### 1.2) 体积对比图(最大体积为单个js文件最大的体积)：
+##### 2.2) 体积对比图(最大体积为单个js文件最大的体积)：
 <img src="./images/tongxingzheng-js-duibi.png">
 
-#### 2.福禄研发运维平台(RDMS)
+#### 3.福禄研发运维平台(RDMS)
 
-##### 2.1) 体积对比图
+##### 3.1) 体积对比图
 <img src="./images/rdms-js-duibi.png">
 
-##### 2.2) 首页加载性能
+##### 3.2) 首页加载性能
 以下将通过一组数据来做比较，总共记录了10次网络请求的参数，其中有三个统计指标，分别是Finish，DomContentLoaded，Load，他们分别代表的意思:
 Finish：首页渲染完成，包括接口数据的请求，用户可以正常交互；
 DomContentLoaded：页面DOM结构加载完成；
